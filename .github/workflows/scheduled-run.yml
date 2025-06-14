@@ -18,4 +18,4 @@ permissions:
 
 jobs:
   call-reusable:
-    uses: to0drunk/revanced_auto_builds/.github/workflows/build.yml
+    uses: to0drunk/revanced_auto_builds/.github/workflows/build.yml@f0191439e10898beb972f3afe04938b0837dce89
