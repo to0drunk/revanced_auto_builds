@@ -1,0 +1,11 @@
+# .github/workflows/scheduled-run.yml
+name: Scheduled Caller
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Runs every day at 06:00 UTC
+  workflow_dispatch:      # Optional: allow manual run too
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/build.yml
