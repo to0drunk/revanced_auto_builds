@@ -3,9 +3,19 @@ name: Scheduled Caller
 
 on:
   schedule:
-    - cron: '0 6 * * *' # Runs every day at 06:00 UTC
-  workflow_dispatch:      # Optional: allow manual run too
+    - cron: '0 6 * * *' # every day at 06:00 UTC
+  workflow_dispatch:      # Optional: manual trigger
+
+permissions:
+  contents: write
+  id-token: write
+  actions: write
+  packages: write
+  pull-requests: write
+  issues: write
+  statuses: write
+  # Add other permissions if required by the reusable workflow
 
 jobs:
   call-reusable:
-    uses: ./.github/workflows/build.yml
+    uses: to0drunk/revanced_auto_builds/.github/workflows/build.yml
