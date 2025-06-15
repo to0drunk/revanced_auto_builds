@@ -2,8 +2,7 @@ name: CI
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 16 * * *"
-
+  - cron: "0 3 * * *"
 jobs:
   check:
     permissions: write-all
